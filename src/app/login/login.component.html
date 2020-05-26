@@ -1,20 +1,47 @@
-<div>
-  <h2>Log in</h2>
-  <form [formGroup]="authForm" (ngSubmit)="signIn()">
-    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
-      <input type="email" placeholder="Email" formControlName="email">
-    </p>
-    <div *ngIf="isSubmitted && formControls.email.errors">
-      <div *ngIf="formControls.email.errors.required">Email is required</div>
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>joinUs !</h2>
+    <p>Connectez-vous dès maintenant et créer ou rejoignez, un des évènement de votre communauté.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form [formGroup]="authForm" (ngSubmit)="signIn()">
+
+        <div class="form-group">
+
+          <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+            <label>Email</label>
+            <input class="form-control" type="email" placeholder="Email" formControlName="email">
+          </p>
+
+        </div>
+
+        <div *ngIf="isSubmitted && formControls.email.errors">
+          <div *ngIf="formControls.email.errors.required">Email is required
+          </div>
+        </div>
+
+        <div class="form-group">
+
+          <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+            <label>Mot de Passe</label>
+            <input class="form-control" type="password" placeholder="Mot de Passe" formControlName="password">
+          </p>
+
+        </div>
+
+        <div *ngIf="isSubmitted && formControls.password.errors">
+          <div *ngIf="formControls.password.errors.required">Password is required</div>
+        </div>
+
+        <p>
+          <input class="btn btn-black" type="submit" value="Log in">
+        </p>
+
+      </form>
+
     </div>
-    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
-      <input type="password" placeholder="Password" formControlName="password">
-    </p>
-    <div *ngIf="isSubmitted && formControls.password.errors">
-      <div *ngIf="formControls.password.errors.required">Password is required</div>
-    </div>
-    <p>
-      <input type="submit" value="Log in">
-    </p>
-  </form>
+  </div>
 </div>
