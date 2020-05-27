@@ -1,8 +1,6 @@
 .sidenav {
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1518348284893-5d31989ec994?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: black;
   overflow-x: hidden;
   padding-top: 20px;
 }
