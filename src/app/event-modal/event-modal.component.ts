@@ -7,9 +7,12 @@ import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./event-modal.component.css']
 })
 export class EventModalComponent implements OnInit {
-  closeResult: string;
+
   constructor(private modalService: NgbModal) {
   }
+  closeResult: string;
+
+  private formValues: string[] = ['Titre', 'Heure'];
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
