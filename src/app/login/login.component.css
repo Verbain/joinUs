@@ -1,6 +1,6 @@
 .sidenav {
   height: 100%;
-  background-color: black;
+  background-color: #ff5c1c;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -13,6 +13,10 @@
   font-size: 1.2em;
 }
 
+.btn--submit{
+  background-color: #ff5c1c;
+  color: white;
+}
 
 
 .main {
