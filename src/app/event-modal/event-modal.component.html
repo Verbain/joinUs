@@ -1,18 +1,25 @@
 <button class="btn btn-sm add-event" (click)="open(mymodal)">Ajouter évènement</button>
 
 <ng-template #mymodal let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title"></h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">×</span>
-    </button>
-  </div>
   <div class="modal-body">
-
-
-
+    <form>
+      <div class="form-group">
+        <label for="InputTitre">Titre</label>
+        <input class="form-control" id="InputTitre" aria-describedby="emailHelp"
+               placeholder="Enterez un titre d'évènement">
+      </div>
+      <div class="form-group">
+        <label for="InputHeure">Heure</label>
+        <input class="form-control" id="InputHeure" placeholder="Entrez une heure">
+      </div>
+      <div class="form-group">
+        <label for="TextAreaDescription">A propos</label>
+        <textarea class="form-control" id="TextAreaDescription" rows="2"
+                  placeholder="Description de l'évènement"></textarea>
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    <button type="button" class="btn add-event" (click)="modal.close('Save click')">Créer</button>
   </div>
 </ng-template>
