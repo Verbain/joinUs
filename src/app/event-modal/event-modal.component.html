@@ -7,6 +7,17 @@
     </button>
   </div>
   <div class="modal-body">
+    <form>
+      <div class="form-group" *ngFor="let formValue of formInputValues">
+        <label>{{formValue.value}}</label>
+        <input class="form-control" [id]="formValue.value + '-input'" [placeholder]="formValue.placeholder">
+      </div>
+      <div class="form-group" *ngFor="let formTextValue of formTextValues">
+        <label>{{formTextValue.value}}</label>
+        <textarea class="form-control" [id]="formTextValue.value + '-textarea'" rows="2"
+                  [placeholder]="formTextValue.placeholder"></textarea>
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn add-event" (click)="modalRef.hide()">Créer</button>

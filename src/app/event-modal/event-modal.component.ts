@@ -8,6 +8,16 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 })
 export class EventModalComponent implements OnInit {
   modalRef: BsModalRef;
+  formInputValues: any = [
+    {value: 'Titre', placeholder: 'Entrez le nom de l\'évènement'},
+    {value: 'Date', placeholder: 'Entrez une date'},
+    {value: 'Heure', placeholder: 'Entrez une heure'}
+  ];
+
+  formTextValues: any = [
+    {value: 'A propos', placeholder: 'Description de l\'évènement'}
+  ];
+
   constructor(private modalService: BsModalService) {
   }
 
