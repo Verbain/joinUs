@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnInit, TemplateRef} from '@angular/core';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-event-modal',
@@ -7,32 +7,17 @@ import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./event-modal.component.css']
 })
 export class EventModalComponent implements OnInit {
-
-  constructor(private modalService: NgbModal) {
-  }
-  closeResult: string;
-
-  private formValues: string[] = ['Titre', 'Heure'];
-
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+  modalRef: BsModalRef;
+  constructor(private modalService: BsModalService) {
   }
 
   ngOnInit(): void {
   }
 
+  openModalWithClass(template: TemplateRef<any>){
+    this.modalRef = this.modalService.show(
+      template,
+      Object.assign({}, { class: 'grey modal-lg'})
+    );
+  }
 }

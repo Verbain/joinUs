@@ -7,7 +7,7 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { EventModalComponent } from './event-modal/event-modal.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ModalModule} from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgbModule
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
