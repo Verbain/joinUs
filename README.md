@@ -100,3 +100,8 @@ Site permettant à un étudiant de rencontrer d’autres étudiants avec qui par
   Git front : https://github.com/Verbain/Project_Front <br/>
   Git back : INCOMING
 
+  ##NPMs
+  ###Bootstrap
+  Bootstrap: npm install --save bootstrap <br>
+  Jquery: npm install --save jquery <br>
+   : @import "~bootstrap/dist/css/bootstrap.css"

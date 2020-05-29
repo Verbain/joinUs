@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import {HeaderComponent} from "./header/header.component";
 import { MapComponent } from './map/map.component';
 import { MapListComponent } from './map-list/map-list.component';
+import { EventModalComponent } from './event-modal/event-modal.component';
+import {ModalModule} from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { MapListComponent } from './map-list/map-list.component';
     HeaderComponent,
     MapComponent,
     MapListComponent,
+    EventModalComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
