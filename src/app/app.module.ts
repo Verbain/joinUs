@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import {HeaderComponent} from "./header/header.component";
+import { MapComponent } from './map/map.component';
+import { MapListComponent } from './map-list/map-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    MapComponent,
+    MapListComponent,
   ],
   imports: [
     BrowserModule,

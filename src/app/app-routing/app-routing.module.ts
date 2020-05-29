@@ -5,6 +5,8 @@ import { AdminComponent } from '../admin/admin.component';
 import { AuthGuard } from '../auth.guard';
 import {LoginComponent} from '../login/login.component';
 import {HeaderComponent} from '../header/header.component';
+import {MapComponent} from "../map/map.component";
+import {MapListComponent} from '../map-list/map-list.component';
 
 /* Routes */
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   /* Route for the admin component, canActivate guard the route for user not logged */
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
-  { path: 'header', component: HeaderComponent }
+  { path: 'header', component: HeaderComponent },
+  { path: 'map/:name', component: MapComponent },
+  { path: 'mapList', component: MapListComponent }
 ];
 
 @NgModule({
