@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { FormBuilder } from '@angular/forms';
+import GoogleUser = gapi.auth2.GoogleUser;
 
 @Component({
   selector: 'app-auth-button',
@@ -49,12 +50,24 @@ export class AuthButtonComponent implements OnInit {
       await this.initGoogleAuth();
     }
     // Resolve or reject signin Promise
+/*
+    V1
     return new Promise(async () => {
       await this.authInstance.signIn().then(
         user => this.user = user,
         error => this.error = error,
         this.authService.signIn(this.user),
         this.router.navigateByUrl('/admin'));
+    });
+*/
+    /*Corriger*/
+    return this.authInstance.signIn().then(
+      (user: GoogleUser) => this.user = user
+    ).then(() => {
+      this.authService.signIn(this.user);
+      this.router.navigateByUrl('/admin');
+    }).catch(err => {
+      this.error = err.message;
     });
   }
 
