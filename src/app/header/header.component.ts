@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {JoinUsEvent} from '../Model/JoinUsEvent';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-
+  @Input() joinUsEvent: JoinUsEvent[];
+  joinUsEventEmitter: JoinUsEvent;
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  sendJoinUsEvent(joinUsEvent){
+    this.joinUsEventEmitter = joinUsEvent;
   }
 }
