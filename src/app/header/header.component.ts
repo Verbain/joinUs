@@ -8,15 +8,14 @@ import {JoinUsEvent} from '../Model/JoinUsEvent';
 })
 
 export class HeaderComponent implements OnInit {
-  @Input() joinUsEvent: JoinUsEvent[];
-  joinUsEventEmitter: JoinUsEvent;
+  eventTransmited: JoinUsEvent;
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
-  sendJoinUsEvent(joinUsEvent){
-    this.joinUsEventEmitter = joinUsEvent;
+  eventAdd(event) {
+    this.eventTransmited = event;
   }
 }

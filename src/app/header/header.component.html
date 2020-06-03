@@ -4,7 +4,7 @@
       <img id="logo-wsf" src=" ./assets/img/wsf-logo.png" alt="logo wsf">
       <div id="add-event-title">
         <div><span id="join">JOIN</span><span id="us">US</span></div>
-        <app-event-modal></app-event-modal>
+        <app-event-modal (joinUsEventEmitter)="eventAdd($event)"></app-event-modal>
       </div>
     </div>
     <div id="space-bar">
@@ -14,5 +14,5 @@
   <div id="event">
     <p> VOS PROCHAINS EVENEMENTS : </p>
   </div>
-  <app-event-list (joinUsEventEmitter)="sendJoinUsEvent($event)"></app-event-list>
+  <app-event-list [eventListEvent]="eventTransmited"></app-event-list>
 </div>

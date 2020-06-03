@@ -7,17 +7,10 @@ import {JoinUsEvent} from '../../Model/JoinUsEvent';
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
-  @Input() joinUsEvent: JoinUsEvent[];
-  @Output() joinUsEventEmitter = new EventEmitter();
+  @Input() eventListEvent: JoinUsEvent;
   constructor() { }
 
   ngOnInit() {
-    this.joinUsEvent = [
-      new JoinUsEvent('Tech&Code Déjeuner', '10/01', '12:00', 'Aujourd\'hui on se retrouvent pour déjeuner ensemble.' )
-    ];
   }
 
-  sendJoinUsEvent(joinUsEventEmitter) {
-    this.joinUsEventEmitter.emit(joinUsEventEmitter);
-  }
 }
