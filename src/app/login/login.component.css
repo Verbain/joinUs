@@ -50,7 +50,7 @@ hr {
 
 @media screen and (min-width: 768px) {
   .main {
-    margin-left: 20%;
+    margin-left: 30%;
   }
 
   .sidenav {
@@ -78,10 +78,14 @@ hr {
 }
 
 .login-main-text h2 {
-  font-weight: 300;
+  font-weight: 500;
+  font-size: 120px;
 }
 
 .btn-black {
   background-color: #000 !important;
   color: #fff;
+}
+.join{
+  color: black;
 }
