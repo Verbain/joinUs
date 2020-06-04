@@ -5,10 +5,11 @@
 #main-menu{
   position: absolute;
   z-index: 1;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 320px;
+  top: 2%;
+  left:1%;
+  bot: 2%;
+  height: 96%;
+  width: 340px;
   color: black;
   background-color: white;
   box-shadow: 0 -1px 24px rgba(0,0,0,0.4);
@@ -54,6 +55,7 @@
   background-color: #ff5c1c;
 }
 
+
 #add-an-event:hover{
   height: 40px;
   width: 90px;
@@ -71,6 +73,11 @@
 #add-event-title{
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-right: 50px;
+}
+
+#nextEventTxt{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
