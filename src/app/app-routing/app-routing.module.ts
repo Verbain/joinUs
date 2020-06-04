@@ -5,7 +5,7 @@ import { AdminComponent } from '../admin/admin.component';
 import { AuthGuard } from '../auth.guard';
 import {LoginComponent} from '../login/login.component';
 import {HeaderComponent} from '../header/header.component';
-import {MapComponent} from "../map/map.component";
+import {MapComponent} from '../map/map.component';
 import {MapListComponent} from '../map-list/map-list.component';
 
 /* Routes */
