@@ -30,6 +30,6 @@ export class LoginComponent implements OnInit {
     this.isSubmitted = true;
     if (this.authForm.invalid){ return ; }
     this.authService.signIn(this.authForm.value);
-    this.router.navigateByUrl('/admin');
+    this.router.navigate(['map/All']);
   }
 }

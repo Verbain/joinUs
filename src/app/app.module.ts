@@ -13,6 +13,7 @@ import { MapListComponent } from './map-list/map-list.component';
 import { EventModalComponent } from './event/event-modal/event-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AuthButtonComponent } from './auth-button/auth-button.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -28,6 +29,7 @@ import { AuthButtonComponent } from './auth-button/auth-button.component';
     EventListComponent,
     EventItemComponent,
     AuthButtonComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

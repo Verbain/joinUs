@@ -17,7 +17,8 @@ export class MapComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-
+      console.log('test');
+      this.mapChoose();
     }
     /*
     Select map to display for the user

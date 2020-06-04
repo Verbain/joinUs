@@ -65,7 +65,7 @@ export class AuthButtonComponent implements OnInit {
       (user: GoogleUser) => this.user = user
     ).then(() => {
       this.authService.signIn(this.user);
-      this.router.navigateByUrl('/admin');
+      this.router.navigate(['map/All']);
     }).catch(err => {
       this.error = err.message;
     });

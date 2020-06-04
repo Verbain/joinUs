@@ -29,7 +29,9 @@ hr {
 .main {
   padding: 0px 10px;
 }
-
+.toTheLeft{
+  margin-left: 30vh;
+}
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -70,7 +72,7 @@ hr {
 
 
 .login-main-text {
-  margin-top: 20%;
+  margin-top: 40%;
   padding: 60px;
   color: #fff;
 }
