@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgZone, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { FormBuilder } from '@angular/forms';
@@ -15,8 +15,7 @@ export class AuthButtonComponent implements OnInit {
   private user: any;
   private error: any;
   private gapiSetup: boolean;
-
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private ngZone: NgZone) {
   }
 
 
@@ -65,7 +64,7 @@ export class AuthButtonComponent implements OnInit {
       (user: GoogleUser) => this.user = user
     ).then(() => {
       this.authService.signIn(this.user);
-      this.router.navigate(['map/All']);
+      this.ngZone.run(() => this.router.navigate(['map/All']));
     }).catch(err => {
       this.error = err.message;
     });

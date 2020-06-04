@@ -1,4 +1,8 @@
-
- <ul class = "nav navbar">
-   <li *ngFor="let promotion of promotions; let i = index"><p (click)="changeMap(i)" class = "hoverable">{{ promotion }}</p></li>
- </ul>
+<ul class="nav flex-column bg-white mb-0">
+  <li *ngFor="let promotion of promotions; let i = index" class="nav-item">
+    <a class="nav-link text-dark font-italic bg-light">
+      <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+      <p (click)="changeMap(i)" class = "hoverable"> {{promotion}} </p>
+    </a>
+  </li>
+</ul>
