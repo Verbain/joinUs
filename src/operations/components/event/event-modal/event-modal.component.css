@@ -1,0 +1,8 @@
+.add-event {
+  color: white;
+  background-color: #ff5c1c;
+}
+
+.add-event:hover {
+  background-color: #e34d12;
+}

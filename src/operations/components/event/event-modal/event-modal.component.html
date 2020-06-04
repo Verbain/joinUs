@@ -1,0 +1,41 @@
+<button type="button" class="btn btn-sm add-event" (click)="openModalWithClass(template)">Créer un
+  évènement</button>
+<ng-template #template>
+  <div class="modal-header">
+    <p> Ajouter un événement JoinUs</p>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label>Nom : </label>
+        <input #nameId
+               class="form-control"
+               placeholder="Entrer votre texte...">
+      </div>
+      <div class="form-group">
+        <label>Date :</label>
+        <input #dateId
+               class="form-control"
+               placeholder="jj/mm">
+      </div>
+      <div class="form-group">
+        <label>Heure :</label>
+        <input #hourId
+               class="form-control"
+               placeholder="hh:mm">
+      </div>
+      <div class="form-group">
+        <label>Description :</label>
+        <input #descriptionId
+               class="form-control"
+               placeholder="Entrer votre texte...">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn add-event" (click)="addEvent(nameId.value, dateId.value, hourId.value, descriptionId.value)">Créer</button>
+  </div>
+</ng-template>

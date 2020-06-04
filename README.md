@@ -1,34 +1,18 @@
-# Project joinUs
+##Get Started
+Afin d'accéder à notre site en local il vous suffit de :
+    
+    git clone https://github.com/Verbain/joinUs.git
+Après avoir cloné le projet déplacé vous à la racine du dossier à l'aide de votre console.
+<br>
+Une fois fait il ne vous reste plus qu'à installer les dépendances :
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+     npm install
+Puis lancer votre serveur : 
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+     ng serve
 ## Objectif/But du projet :
 
-Site permettant à un étudiant de rencontrer d’autres étudiants avec qui partager un repas dans les alentours de l’école, d'accéder à un ranking des différents points de restauration aux alentours.
+"JoinUs !" est un site permettant à un étudiant de partager un repas avec d'autres étudiants a l'aide de création d'événement.
 
 ##Périmètre :
   France only
@@ -36,13 +20,11 @@ Site permettant à un étudiant de rencontrer d’autres étudiants avec qui par
   
   
 ##Fonctionnalités : 
-  Créer un compte (optionnel?) / Se connecter
-  Pin un coin de la map 
+  Se connecter
+  Ping un coin de la map 
   Créer un event (sortie avec heure)
   Rejoindre un groupe 
-  Reset map chaque jour ^^
-  Profil : Historique des restaurants 
-  Pouvoir laisser des avis sur les évènements passés (optionnel?)
+  Reset map chaque jour
   
   
   ##Idées : 
@@ -51,17 +33,16 @@ Site permettant à un étudiant de rencontrer d’autres étudiants avec qui par
   	Filtrer les utilisateurs (par classe) 
   	Actions tierces (études, bar, trajets,…)
   	Envoyer des invitations à rejoindre un groupe
+  	Pouvoir laisser des avis sur les évènements passés
   
   ##Techno : 
-  Angular / Java 
-  
-  API potentiel.s : https://umap.openstreetmap.fr/fr/
+  Angular
+
+  API : https://umap.openstreetmap.fr/fr/
   Google co: https://developers.google.com/identity/sign-in/web
   
   POC : créer un évent / se log / s’y rendre
-  
-  
-  google connect --> gestions utilisateur (que ceux terminant par wsf.com)
+  google connect --> gestions utilisateur
   
   
   
@@ -90,13 +71,8 @@ Site permettant à un étudiant de rencontrer d’autres étudiants avec qui par
   ##Where – Où
   Le lieu est également essentiel à la compréhension d’une offre de produits et services. Le consommateur doit pouvoir savoir où se trouve l’entreprise et si le contenu est accessible dans sa ville, dans son pays.
   
-  Aux alentours de la WebSchoolFactory
-  
-  
-  
-  
+  Aux alentours de la WebSchoolFactory 
   
   ##Help US 
   Git front : https://github.com/Verbain/Project_Front <br/>
-  Git back : INCOMING
 
