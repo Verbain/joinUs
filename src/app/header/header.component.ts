@@ -8,7 +8,7 @@ import {JoinUsEvent} from '../Model/JoinUsEvent';
 })
 
 export class HeaderComponent implements OnInit {
-  eventTransmited: JoinUsEvent;
+  eventsTransmited = [];
   constructor() {
   }
 
@@ -16,6 +16,8 @@ export class HeaderComponent implements OnInit {
   }
 
   eventAdd(event) {
-    this.eventTransmited = event;
+    console.log(event);
+    this.eventsTransmited.push(event);
+    console.log(this.eventsTransmited);
   }
 }

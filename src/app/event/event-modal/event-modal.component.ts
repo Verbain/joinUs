@@ -29,7 +29,6 @@ export class EventModalComponent implements OnInit {
   }
   addEvent(name: string, date: string, hour: string, description: string) {
     this.indexEvent = new JoinUsEvent(name, date, hour, description);
-    console.log(this.indexEvent);
     this.sendJoinUsEvent();
     this.modalRef.hide();
   }

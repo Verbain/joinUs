@@ -1,11 +1,7 @@
 <div>
   <ol class="list-group">
-    <li>
-      Name:{{eventListEvent.name}}
-      Date: {{eventListEvent.date}}
-      Heure:{{eventListEvent.hour}}
-      Description:{{eventListEvent.description}}
+    <li *ngFor=" let events of eventsListEvent">
+      <app-event-item [event]="events"></app-event-item>
     </li>
-    <app-event-item></app-event-item>
   </ol>
 </div>
