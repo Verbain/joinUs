@@ -10,7 +10,7 @@ import { EventItemComponent } from './event/event-item/event-item.component';
 import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
 import { MapListComponent } from './map-list/map-list.component';
-import { EventModalComponent } from './event-modal/event-modal.component';
+import { EventModalComponent } from './event/event-modal/event-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AuthButtonComponent } from './auth-button/auth-button.component';
 
