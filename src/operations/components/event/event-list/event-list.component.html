@@ -1,0 +1,7 @@
+<div id="event-list-div" >
+  <ol class="list-group">
+    <li *ngFor=" let eventOfList of events">
+      <app-event-item [event]="eventOfList"></app-event-item>
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,18 @@
+<div id="main-menu">
+  <div id="title-menu">
+    <div id="logo-title">
+      <img id="logo-wsf" src="../../../assets/img/wsf-logo.png" alt="logo wsf">
+      <div id="add-event-title">
+        <div><span id="join">JOIN</span><span id="us">US</span></div>
+        <app-event-modal [events]="events"></app-event-modal>
+      </div>
+    </div>
+    <div id="space-bar">
+    </div>
+  </div>
+
+  <div id="event">
+    <span id="nextEventTxt">VOS PROCHAINS EVENEMENTS :</span>
+  </div>
+  <app-event-list [events]="events"></app-event-list>
+</div>

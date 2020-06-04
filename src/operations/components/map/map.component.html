@@ -1,0 +1,29 @@
+
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 bg-light">
+    <div (click)="mapChoose()">
+      <app-map-list></app-map-list>
+    </div>
+  </div>
+</div>
+<div *ngIf="showMapAll" class="page-content ">
+  <iframe width="100%" height="100%" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/test-joinus_460241?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=none&captionBar=false&locateControl=false&measureControl=false&editinosmControl=false&datalayers=1288929%2C1294855%2C1294856%2C1294859%2C1297040"></iframe>
+</div>
+<div *ngIf="showMapP2022" class="page-content ">
+  <iframe width="100%" height="100%" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/test-joinus_460241?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=none&captionBar=false&locateControl=false&measureControl=false&editinosmControl=false&datalayers=1288929%2C1294855"></iframe>
+</div>
+<div *ngIf="showMapP2023" class="page-content ">
+  <iframe width="100%" height="100%" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/test-joinus_460241?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=none&captionBar=false&locateControl=false&measureControl=false&editinosmControl=false&datalayers=1288929%2C1294856"></iframe>
+</div>
+<div *ngIf="showMapP2024" class="page-content " >
+  <iframe width="100%" height="100%" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/test-joinus_460241?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=none&captionBar=false&datalayers=1288929%2C1294859&locateControl=false&measureControl=false&editinosmControl=false"></iframe>
+</div>
+<div *ngIf="showMapP2025" class="page-content ">
+  <iframe width="100%" height="100%" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/test-joinus_460241?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=false&embedControl=false&datalayersControl=false&onLoadPanel=none&captionBar=false&locateControl=false&measureControl=false&editinosmControl=false&datalayers=1288929%2C1297040"></iframe>
+</div>
+
+<div id="logOutButton">
+  <app-logout></app-logout>
+</div>
+
+

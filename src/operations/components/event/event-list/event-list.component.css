@@ -1,0 +1,5 @@
+div#event-list-div{
+  height: 80%;
+  width: 340px;
+  overflow: auto;
+}
