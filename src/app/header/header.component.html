@@ -4,23 +4,15 @@
       <img id="logo-wsf" src=" ./assets/img/wsf-logo.png" alt="logo wsf">
       <div id="add-event-title">
         <div><span id="join">JOIN</span><span id="us">US</span></div>
-        <app-event-modal></app-event-modal>
+        <app-event-modal [events]="events"></app-event-modal>
       </div>
     </div>
-    <div id="style-search-bar">
-    <input id="search-bar" type="text" placeholder="Search...">
+    <div id="space-bar">
     </div>
   </div>
 
   <div id="event">
     <p> VOS PROCHAINS EVENEMENTS : </p>
   </div>
-  <ul id="event-list">
-    <li id="event-one">
-      <p>EVENEMENT 1</p>
-    </li>
-    <li id="event-two">
-      <p>EVENEMENT 2</p>
-    </li>
-  </ul>
+  <app-event-list [events]="events"></app-event-list>
 </div>
