@@ -10,7 +10,8 @@ import {JoinUsEvent} from '../../Model/JoinUsEvent';
 export class EventModalComponent implements OnInit {
   modalRef: BsModalRef;
   indexEvent: JoinUsEvent;
-  @Output() joinUsEventEmitter = new EventEmitter();
+  @Input() events = [];
+
   constructor(private modalService: BsModalService) {
   }
 
@@ -23,13 +24,10 @@ export class EventModalComponent implements OnInit {
       Object.assign({}, {class: 'grey modal-lg'})
     );
   }
-  // emmettre un event et y injecter l'event joinUs
-  sendJoinUsEvent() {
-    this.joinUsEventEmitter.emit(this.indexEvent);
-  }
+
   addEvent(name: string, date: string, hour: string, description: string) {
     this.indexEvent = new JoinUsEvent(name, date, hour, description);
-    this.sendJoinUsEvent();
+    this.events.push(this.indexEvent);
     this.modalRef.hide();
   }
 }

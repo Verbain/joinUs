@@ -7,7 +7,7 @@ import {JoinUsEvent} from '../../Model/JoinUsEvent';
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
-  @Input() eventsListEvent;
+  @Input() events;
   constructor() { }
 
   ngOnInit() {
